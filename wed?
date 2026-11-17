@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Portfolio | [นาย ศุภกร เสียงเปรม]</title>
+    <style>
+        /* การตั้งค่าพื้นฐาน */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { line-height: 1.6; color: #333; background-color: #f4f7f6; }
+        html { scroll-behavior: smooth; }
+
+        /* แถบเมนูด้านบน */
+        nav { background: #2c3e50; color: #fff; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 1.5rem; font-weight: bold; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: #3498db; }
+
+        /* ส่วนหัว (Hero Section) */
+        header { background: linear-gradient(135deg, #3498db, #2c3e50); color: white; text-align: center; padding: 4rem 1rem; }
+        header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; margin-bottom: 1rem; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* โครงสร้างเนื้อหาแต่ละส่วน */
+        section { padding: 4rem 10%; max-width: 1200px; margin: auto; }
+        h2 { text-align: center; margin-bottom: 2rem; color: #2c3e50; font-size: 2rem; border-bottom: 3px solid #3498db; display: inline-block; padding-bottom: 5px; }
+        .section-header { text-align: center; }
+
+        /* เกี่ยวกับฉัน & ทักษะ */
+        .about-box { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem; }
+        .skill-tag { background: #e1f0fa; color: #2980b9; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+
+        /* การ์ดแสดงผลงาน (Projects) */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .project-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; display: flex; flex-direction: column; }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; }
+        .project-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .project-info h3 { margin-bottom: 0.5rem; color: #2c3e50; }
+        .project-info p { font-size: 0.95rem; color: #666; margin-bottom: 1rem; }
+        .btn { display: inline-block; background: #3498db; color: #fff; padding: 8px 16px; text-decoration: none; border-radius: 5px; text-align: center; font-weight: bold; }
+        .btn:hover { background: #2980b9; }
+
+        /* ส่วนท้าย (Footer) */
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
+        footer a { color: #3498db; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <!-- เมนูนำทาง -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#projects">ผลงานโค้ด</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <!-- ส่วนแนะนำตัว -->
+    <header>
+        <!-- เปลี่ยนลิงก์รูปภาพเป็นไฟล์รูปของคุณ เช่น profile.jpg -->
+        <img src="https://via.placeholder.com/150" alt="รูปโปรไฟล์ของฉัน">
+        <h1>สวัสดีครับ/ค่ะ ฉันชื่อ [ชื่อ-นามสกุลของคุณ]</h1>
+        <p>นักเรียนชั้น [ระดับชั้น] | [ชื่อโรงเรียน] | สนใจด้านการเขียนโปรแกรมและเทคโนโลยี</p>
+    </header>
+
+    <!-- เกี่ยวกับฉัน -->
+    <section id="about">
+        <div class="section-header">
+            <h2>เกี่ยวกับฉัน (About Me)</h2>
+        </div>
+        <div class="about-box">
+            <p><strong>ประวัติส่วนตัว:</strong> [เขียนแนะนำตัวเองสั้นๆ เช่น ชื่อเล่น อายุ ความสนใจด้านคอมพิวเตอร์ หรือเป้าหมายในอนาคต]</p>
+            <br>
+            <p><strong>ทักษะด้านการเขียนโค้ดและเทคโนโลยี:</strong></p>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Git & GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ผลงานโค้ด -->
+    <section id="projects">
+        <div class="section-header">
+            <h2>ผลงานด้านการเขียนโค้ด (Coding Projects)</h2>
+        </div>
+        <div class="projects-grid">
+            
+            <!-- ผลงานชิ้นที่ 1 (บังคับต้องมีอย่างน้อย 1 ชิ้นที่เชื่อมโยงโค้ดได้จริง) -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x200?text=Project+1+Screenshot" alt="ภาพตัวอย่างผลงานที่ 1">
+                <div class="project-info">
+                    <div>
+                        <h3>1. [ชื่อผลงานโค้ดของคุณ เช่น โปรแกรมคำนวณเกรด]</h3>
+                        <p>[อธิบายสั้นๆ ว่าโปรแกรมนี้ทำอะไรได้ ใช้ภาษาอะไรเขียน เช่น พัฒนาด้วยภาษา Python / HTML+JS เพื่อช่วยคำนวณเกรดเฉลี่ย]</p>
+                    </div>
+                    <!-- ใส่ลิงก์ GitHub Repository หรือ Google Colab / Replit ของผลงานชิ้นนี้ -->
+                    <a href="https://github.com/[ชื่อผู้ใช้GitHubของคุณ]/[ชื่อRepoผลงาน]" target="_blank" class="btn">ดูซอร์สโค้ด (Source Code)</a>
+                </div>
+            </div>
+
+            <!-- ผลงานชิ้นที่ 2 (ถ้ามี สามารถเพิ่มหรือลบกล่องนี้ได้) -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x200?text=Project+2+Screenshot" alt="ภาพตัวอย่างผลงานที่ 2">
+                <div class="project-info">
+                    <div>
+                        <h3>2. เว็บไซต์ e-Portfolio ส่วนตัว</h3>
+                        <p>เว็บไซต์รวบรวมประวัติและผลงาน พัฒนาด้วย HTML และ CSS และเผยแพร่ออนไลน์ผ่านระบบ GitHub Pages</p>
+                    </div>
+                    <a href="#about" class="btn">ดูรายละเอียดเว็บไซต์</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ติดต่อ -->
+    <footer id="contact">
+        <h3>ช่องทางการติดต่อ (000-111-2587)</h3>
+        <p>อีเมล: [supakornwork2@gmail.com]</p>
+        <p>GitHub: <a href="https://github.com/[bajareza]" target="_blank">github.com/[bajareza]</a></p>
+        <br>
+        <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 [นายศุภกร เสียงเปรม]. สร้างเพื่อการศึกษา</p>
+    </footer>
+
+</body>
+</html>ก
